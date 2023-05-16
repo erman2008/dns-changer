@@ -62,7 +62,7 @@ elif [[ $1 == "" ]]; then
         echo "███████████████████████████████████████████████████"
         echo "                                                   "
         echo "                                                   "
-        echo " Request :                                          "
+        echo "Request :                                          "
         read request
 
         if [[ $request == "1" ]]; then
