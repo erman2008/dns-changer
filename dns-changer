@@ -1,0 +1,103 @@
+#!/bin/bash
+
+dnschver=0.1-alpha
+
+if [[ $1 == "cleanbrowsing" ]]; then
+    sudo cp /etc/dns/cleanbrowsing.conf /etc/resolv.conf
+    echo "changing DNS to cleanbrowsing : done!"
+elif [[ $1 == "cloudflare" ]]; then
+    sudo cp /etc/dns/cloudflare.conf /etc/resolv.conf
+    echo "changing DNS to cloudflare : done!"
+elif [[ $1 == "comodo" ]]; then
+    sudo cp /etc/dns/comodo.conf /etc/reslov.conf
+    echo "changing DNS to comodo : done!"
+elif [[ $1 == "electro" ]]; then
+    sudo cp /etc/dns/electro.conf /etc/reslov.conf
+    echo "changing DNS to electro : done!"
+elif [[ $1 == "google" ]]; then
+    sudo cp /etc/dns/google.conf /etc/reslov.conf
+    echo "changing DNS to google : done!"
+elif [[ $1 == "opendns" ]]; then
+    sudo cp /etc/dns/opendns.conf /etc/reslov.conf
+    echo "changing DNS to opendns : done!"
+elif [[ $1 == "quad9" ]]; then
+    sudo cp /etc/dns/quad9.conf /etc/reslov.conf
+    echo "changing DNS to quad9 : done!"
+elif [[ $1 == "shecan" ]]; then
+    sudo cp /etc/dns/shecan.conf /etc/reslov.conf
+    echo "changing DNS to shecan : done!"
+elif [[ $1 == "begzar" ]]; then
+    sudo cp /etc/dns/begzar.conf /etc/reslov.conf
+    echo "changing DNS to begzar : done!"
+elif [[ $1 == "reset" ]]; then
+    sudo cp /etc/dns/backup.conf /etc/reslov.conf
+    echo "reset DNS settings : done!"
+elif [[ $1 == "help" ]]; then
+    cat /etc/dns/help
+elif [[ $1 == "version" ]]; then
+    echo $dnschver
+elif [[ $1 == "" ]]; then
+        clear
+        echo "                                                   "
+        echo "             Welcome to DNS changer                "
+        echo "            Developed by Barg Project              "
+        echo "                                                   "
+        echo "███████████████████████████████████████████████████"
+        echo "███                                             ███"
+        echo "███       Enter number of your request :        ███"
+        echo "███---------------------------------------------███"
+        echo "███                                             ███"
+        echo "███      1. change DNS to "Cleanbrowsing"         ███"
+        echo "███      2. change DNS to "Cloudflare"            ███"
+        echo "███      3. change DNS to "Comodo"                ███"
+        echo "███      4. change DNS to "Electro"               ███"
+        echo "███      5. change DNS to "Google"                ███"
+        echo "███      6. change DNS to "OpenDNS"               ███"
+        echo "███      7. change DNS to "Quad9"                 ███"
+        echo "███      8. change DNS to "Shecan"                ███"
+        echo "███      9. change DNS to "Begzar"                ███"
+        echo "███      0. change DNS to default (reset)       ███"
+        echo "███      h. Help                                ███"
+        echo "███                                             ███"
+        echo "███████████████████████████████████████████████████"
+        echo "                                                   "
+        echo "                                                   "
+        echo " Request :                                          "
+        read request
+
+        if [[ $request == "1" ]]; then
+            sudo cp /etc/dns/cleanbrowsing.conf /etc/resolv.conf
+            echo "changing DNS to cleanbrowsing : done!"
+        elif [[ $request == "2" ]]; then
+            sudo cp /etc/dns/cloudflare.conf /etc/resolv.conf
+            echo "changing DNS to cloudflare : done!"
+        elif [[ $request == "3" ]]; then
+            sudo cp /etc/dns/comodo.conf /etc/reslov.conf
+            echo "changing DNS to comodo : done!"
+        elif [[ $request == "4" ]]; then
+            sudo cp /etc/dns/electro.conf /etc/reslov.conf
+            echo "changing DNS to electro : done!"
+        elif [[ $request == "5" ]]; then
+            sudo cp /etc/dns/google.conf /etc/reslov.conf
+            echo "changing DNS to google : done!"
+        elif [[ $request == "6" ]]; then
+            sudo cp /etc/dns/opendns.conf /etc/reslov.conf
+            echo "changing DNS to opendns : done!"
+        elif [[ $request == "7" ]]; then
+            sudo cp /etc/dns/quad9.conf /etc/reslov.conf
+            echo "changing DNS to quad9 : done!"
+        elif [[ $request == "8" ]]; then
+            sudo cp /etc/dns/shecan.conf /etc/resolv.conf
+            echo "changing DNS to shecan : done!"
+        elif [[ $request == "9" ]]; then
+            sudo cp /etc/dns/begzar.conf /etc/resolv.conf
+            echo "changing DNS to begzar : done!"
+        elif [[ $request == "0" ]]; then
+            sudo cp /etc/dns/backup.conf /etc/resolv.conf
+            echo "reset DNS settings : done!"
+        elif [[ $request == "h" ]]; then
+            cat /etc/dns/help
+            echo ""
+            echo $dnschver
+        fi
+fi
