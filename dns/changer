@@ -36,7 +36,7 @@ elif [[ $1 == "help" ]]; then
     cat /etc/dns/help
 elif [[ $1 == "version" ]]; then
     echo $dnschver
-elif [[ $1 == "" ]]; then
+elif [[ -z "$1" ]]; then
         clear
         echo "                                                   "
         echo "             Welcome to DNS changer                "

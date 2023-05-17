@@ -4,13 +4,13 @@
 if [[ -e /tmp/dnscheck ]]; then
 
     clear
-    /etc/dns/dns-changer
+    /etc/dns/changer
     
 else
 
     sudo cp /etc/resolv.conf /etc/dns/backup.conf
     echo done! >> /tmp/dnscheck
     clear
-    /etc/dns/dns-changer
+    /etc/dns/changer
 
 fi
